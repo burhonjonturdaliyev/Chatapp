@@ -1,6 +1,7 @@
 import 'package:chat_bot/About.dart';
 import 'package:chat_bot/Contact.dart';
 import 'package:chat_bot/Location.dart';
+import 'package:chat_bot/admin.dart';
 import 'package:chat_bot/chat.dart';
 import 'package:chat_bot/login.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,8 @@ void main(){
       primarySwatch: Colors.blue,
     ),
 debugShowCheckedModeBanner: false,
-    home: welcomepage(),
+    home: admin(),
+    //home: welcomepage(),
     //home: loginpage(),
     //home: chatapp(),
   ));
@@ -181,6 +183,22 @@ class _chatappState extends State<chatapp> {
             ),
             new ListTile(
               title: new Text(
+                "Admin page",
+                style: TextStyle(
+                  color: Colors.blue,
+                ),
+              ),
+              trailing: new Icon(
+                Icons.admin_panel_settings_outlined,
+                color: Colors.blue,
+              ),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>admin()));
+              },
+            ),
+            Divider(color: Colors.blue),
+            new ListTile(
+              title: new Text(
                   "Logout",
               style: TextStyle(
                 color: Colors.blue,
@@ -189,6 +207,7 @@ class _chatappState extends State<chatapp> {
               trailing: new Icon(
                   Icons.login,
                 color: Colors.blue,
+
               ),
               onTap: (){
                 //  _launcherURL(1);

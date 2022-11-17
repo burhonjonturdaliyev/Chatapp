@@ -2,7 +2,7 @@
     package="com.example.chat_bot">
 
    <application
-        android:label="chat_bot"
+        android:label="AI chat bot"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
