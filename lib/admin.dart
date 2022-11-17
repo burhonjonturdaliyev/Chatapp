@@ -286,7 +286,9 @@ class _OtpScreenState extends State<OtpScreen> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: MaterialButton(
-            onPressed: (){},
+            onPressed: (){
+              Navigator.pop(context);
+            },
             height: 50.0,
             minWidth: 50.0,
             shape: RoundedRectangleBorder(
