@@ -18,8 +18,8 @@ void main(){
       primarySwatch: Colors.blue,
     ),
 debugShowCheckedModeBanner: false,
-    home: admin(),
-    //home: welcomepage(),
+    // home: admin(),
+    home: welcomepage(),
     //home: loginpage(),
     //home: chatapp(),
   ));
