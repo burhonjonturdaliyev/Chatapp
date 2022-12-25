@@ -11,12 +11,9 @@ class welcomepage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Container(
-
-
           //we will give media query height
           //double.infinity make it big as my parent allows
           //while MediaQuery make it big as per the
-
 
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
@@ -29,17 +26,15 @@ class welcomepage extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Text(
-                      "Welcome!",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                    color: Colors.blue,
-                  ),
-
+                    "Welcome!",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                      color: Colors.blue,
+                    ),
                   ),
                   SizedBox(
                     height: 20,
-
                   ),
                   Text(
                     "This is our AI chat bot app!",
@@ -52,17 +47,12 @@ class welcomepage extends StatelessWidget {
                 ],
               ),
               Container(
-                height: MediaQuery.of(context).size.height/3,
+                height: MediaQuery.of(context).size.height / 3,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('Image/1.png')
-                  )
-                ),
+                    image: DecorationImage(image: AssetImage('Image/1.png'))),
               ),
-
               Column(
                 children: <Widget>[
-
                   //The login button
 
                   MaterialButton(
@@ -73,12 +63,8 @@ class welcomepage extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => loginpage()));
                     },
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: Colors.blue
-                      ),
-                      borderRadius: BorderRadius.circular(50)
-
-                    ),
+                        side: BorderSide(color: Colors.blue),
+                        borderRadius: BorderRadius.circular(50)),
                     child: Text(
                       "Login",
                       style: TextStyle(
@@ -87,7 +73,6 @@ class welcomepage extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-
                   ),
 
                   //The signup button
@@ -98,16 +83,16 @@ class welcomepage extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 60,
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => signupgape()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => signupgape()));
                     },
                     shape: RoundedRectangleBorder(
                         // side: BorderSide(
                         //     color: Colors.black
                         // ),
-                        borderRadius: BorderRadius.circular(50)
-
-                    ),
+                        borderRadius: BorderRadius.circular(50)),
                     child: Text(
                       "Sign up",
                       style: TextStyle(
@@ -118,19 +103,12 @@ class welcomepage extends StatelessWidget {
                     ),
                     color: Colors.blue,
                   ),
-
                 ],
               )
-
             ],
           ),
-
         ),
       ),
-
-
     );
-
-
   }
 }

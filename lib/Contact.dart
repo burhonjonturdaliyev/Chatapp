@@ -14,40 +14,41 @@ class contactpage extends StatelessWidget {
         appBar: AppBar(
           title: Text("Contact"),
           leading: IconButton(
-            onPressed: (){
+            onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.arrow_circle_left_outlined,
+            icon: Icon(
+              Icons.arrow_circle_left_outlined,
               size: 35,
               color: Colors.white,
             ),
-
           ),
         ),
-
         body: ListView(
           children: [
-            SizedBox(height: 5,),
+            SizedBox(
+              height: 5,
+            ),
             Text(
-                "Our Team members",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-              color: Colors.green
+              "Our Team members",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.green),
             ),
+            SizedBox(
+              height: 10,
             ),
-
-            SizedBox(height: 10,),
             Text(
               "First team coder:",
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
-                  color: Colors.greenAccent
-              ),
+                  color: Colors.greenAccent),
             ),
-
-            SizedBox(height: 5,),
+            SizedBox(
+              height: 5,
+            ),
             Text(
               "Burkhonjon Turdialiyev - Flutter and Graphic designer.\nAdress: Namangan Region, Chust disrtict, Bibiona 211\nPhone number: +998(90)-693-65-94",
               style: TextStyle(
@@ -56,18 +57,19 @@ class contactpage extends StatelessWidget {
                 color: Colors.blue,
               ),
             ),
-
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               "Second team coder:",
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
-                  color: Colors.greenAccent
-              ),
+                  color: Colors.greenAccent),
             ),
-
-            SizedBox(height: 5,),
+            SizedBox(
+              height: 5,
+            ),
             Text(
               "Akbarshokh Umirzaqov - Java Backend developer.\nAdress: Andijan Region, Old city street, M.Saidov 20\nPhone number: +998(95)-045-11-20",
               style: TextStyle(
@@ -76,18 +78,19 @@ class contactpage extends StatelessWidget {
                 color: Colors.blue,
               ),
             ),
-
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               "Third team coder:",
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
-                  color: Colors.greenAccent
-              ),
+                  color: Colors.greenAccent),
             ),
-
-            SizedBox(height: 5,),
+            SizedBox(
+              height: 5,
+            ),
             Text(
               "Muhammadali Shokirov - UX/UI designer.\nAdress: Andijan Region, Izboskan District, Chuvama Str\nPhone number: +998(90)-205-86-76",
               style: TextStyle(
@@ -96,18 +99,19 @@ class contactpage extends StatelessWidget {
                 color: Colors.blue,
               ),
             ),
-
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               "Fourth team coder:",
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
-                  color: Colors.greenAccent
-              ),
+                  color: Colors.greenAccent),
             ),
-
-            SizedBox(height: 5,),
+            SizedBox(
+              height: 5,
+            ),
             Text(
               "Sherali Yusupov - Python developer and SMM marketolog.\nAdress: Surkhandarya Region, Shurchi district, Yalti street\nPhone number: +998(90)-543-65-07",
               style: TextStyle(
@@ -116,13 +120,9 @@ class contactpage extends StatelessWidget {
                 color: Colors.blue,
               ),
             ),
-
-
           ],
         ),
-
       ),
-
     );
   }
 }
