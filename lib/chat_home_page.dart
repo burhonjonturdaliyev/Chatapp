@@ -28,36 +28,39 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage("assets/chat.jpg"),
-            )),
-        child: ListView.builder(
-          itemCount: textList.length,
-          itemBuilder: (context, index) {
-            return Container(
-              margin: EdgeInsets.all(MediaQuery.of(context).size.height * 0.02),
-              alignment: textList[index].id
-                  ? AlignmentDirectional.centerEnd
-                  : AlignmentDirectional.centerStart,
-              child: Container(
-                padding:
-                EdgeInsets.all(MediaQuery.of(context).size.width * 0.025),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.blue,
+      body: SafeArea(
+        minimum: EdgeInsets.fromLTRB(0, 0, 0, 77),
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage("assets/chat.jpg"),
+              )),
+          child: ListView.builder(
+            itemCount: textList.length,
+            itemBuilder: (context, index) {
+              return Container(
+                margin: EdgeInsets.all(MediaQuery.of(context).size.height * 0.02),
+                alignment: textList[index].id
+                    ? AlignmentDirectional.centerEnd
+                    : AlignmentDirectional.centerStart,
+                child: Container(
+                  padding:
+                  EdgeInsets.all(MediaQuery.of(context).size.width * 0.025),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.blue,
+                  ),
+                  child: Text(
+                    textList[index].text,
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
-                child: Text(
-                  textList[index].text,
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            );
-          },
+              );
+            },
+          ),
         ),
       ),
       floatingActionButton: Row(
@@ -75,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                 fillColor: Colors.blue,
                 filled: true,
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(30),
                   borderSide: const BorderSide(color: Colors.blue, width: 2),
                 ),
               ),

@@ -81,28 +81,31 @@ class _OtpScreenState extends State<OtpScreen> {
     return Center(
       child: Container(
         padding: EdgeInsets.fromLTRB(100, 0, 100, 0),
-        child: MaterialButton(
-        minWidth: double.infinity,
-        height: 60,
-        onPressed: () {
+        child: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: MaterialButton(
+          minWidth: double.infinity,
+          height: 60,
+          onPressed: () {
       Navigator.push(
       context, MaterialPageRoute(builder: (context) => MyAdmin()));
       },
-        shape: RoundedRectangleBorder(
-          // side: BorderSide(
-          //     color: Colors.black
-          // ),
-            borderRadius: BorderRadius.circular(50)),
-        child: Text(
-          "Enter",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
+          shape: RoundedRectangleBorder(
+            // side: BorderSide(
+            //     color: Colors.black
+            // ),
+              borderRadius: BorderRadius.circular(50)),
+          child: Text(
+            "Enter",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+            ),
           ),
-        ),
-        color: Colors.blue[300],
+          color: Colors.blue[300],
 
+          ),
         ),
       ),
     );

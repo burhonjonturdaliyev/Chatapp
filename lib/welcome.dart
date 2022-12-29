@@ -1,3 +1,4 @@
+import 'package:chat_bot/main.dart';
 import 'package:flutter/material.dart';
 import 'login.dart';
 import 'signup.dart';
@@ -60,13 +61,13 @@ class welcomepage extends StatelessWidget {
                     height: 60,
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => loginpage()));
+                          MaterialPageRoute(builder: (context) => chatapp()));
                     },
                     shape: RoundedRectangleBorder(
                         side: BorderSide(color: Colors.blue),
                         borderRadius: BorderRadius.circular(50)),
                     child: Text(
-                      "Login",
+                      "Get start",
                       style: TextStyle(
                         color: Colors.blue,
                         fontSize: 18,

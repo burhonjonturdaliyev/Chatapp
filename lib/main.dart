@@ -72,7 +72,6 @@ class _chatappState extends State<chatapp> {
     String url = "";
     if (value == 1) {
       url = "https://miro.medium.com/max/720/1*vih036gD7fwgfj2jXHgKHA.webp";
-      //"https://matwrites.com/wp-content/uploads/2018/03/Flutter.png";
     } else if (value == 2) {
       url =
       "https://image.shutterstock.com/image-vector/banner-social-media-marketing-technology-260nw-1142740865.jpg";
