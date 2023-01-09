@@ -1,8 +1,8 @@
 import 'package:chat_bot/main.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class signupgape extends StatelessWidget {
-  @override
   Widget inputFile({label, obscureText = false}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +38,6 @@ class signupgape extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.light,
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
@@ -50,6 +49,7 @@ class signupgape extends StatelessWidget {
             color: Colors.blue,
           ),
         ),
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       body: SingleChildScrollView(
         child: Container(

@@ -30,8 +30,6 @@ class _adminState extends State<admin> {
 class OtpScreen extends StatefulWidget {
   const OtpScreen({Key? key}) : super(key: key);
 
-  // final String a="1", b="2", c="3", d="4";
-
   @override
   State<OtpScreen> createState() => _OtpScreenState();
 }
@@ -77,34 +75,39 @@ class _OtpScreenState extends State<OtpScreen> {
     );
   }
 
-  builButton(){
+  builButton() {
     return Center(
       child: Container(
         padding: EdgeInsets.fromLTRB(100, 0, 100, 0),
         child: Padding(
           padding: const EdgeInsets.all(30.0),
           child: MaterialButton(
-          minWidth: double.infinity,
-          height: 60,
-          onPressed: () {
-      Navigator.push(
-      context, MaterialPageRoute(builder: (context) => MyAdmin()));
-      },
-          shape: RoundedRectangleBorder(
-            // side: BorderSide(
-            //     color: Colors.black
-            // ),
-              borderRadius: BorderRadius.circular(50)),
-          child: Text(
-            "Enter",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
+            splashColor: Colors.cyan[200],
+            minWidth: double.infinity,
+            height: 60,
+            onPressed: () {
+              check(pinOneController.text, pinTwoController.text,
+                  pinThreeController.text, pinFourController.text);
+              pinOneController.clear();
+              pinTwoController.clear();
+              pinThreeController.clear();
+              pinFourController.clear();
+              pinIndex = 0;
+            },
+            shape: RoundedRectangleBorder(
+                // side: BorderSide(
+                //     color: Colors.black
+                // ),
+                borderRadius: BorderRadius.circular(50)),
+            child: Text(
+              "Enter",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              ),
             ),
-          ),
-          color: Colors.blue[300],
-
+            color: Colors.blue[300],
           ),
         ),
       ),
@@ -264,18 +267,6 @@ class _OtpScreenState extends State<OtpScreen> {
     }
   }
 
-  // checkPin(){
-  //   if(pinOneController.text=="1"){
-  //     if(pinTwoController.text=="2"){
-  //       if(pinThreeController.text=="3"){
-  //         if(pinFourController.text=="4"){
-  //           print("Password correct!");
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-
   buildPinRow() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -298,6 +289,13 @@ class _OtpScreenState extends State<OtpScreen> {
         ),
       ],
     );
+  }
+
+  void check(String one, String two, String three, String four) {
+    if (one == "2" && two == "5" && three == "8" && four == "0") {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => MyAdmin()));
+    }
   }
 
   buildSecurityText() {

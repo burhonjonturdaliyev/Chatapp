@@ -1,6 +1,5 @@
 import 'package:chat_bot/main.dart';
 import 'package:flutter/material.dart';
-import 'login.dart';
 import 'signup.dart';
 
 class welcomepage extends StatelessWidget {

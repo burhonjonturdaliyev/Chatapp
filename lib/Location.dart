@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
 
 class locationpage extends StatelessWidget {
   const locationpage({Key? key}) : super(key: key);

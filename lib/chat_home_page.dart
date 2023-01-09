@@ -1,5 +1,6 @@
 import 'package:chat_bot/model/chat_model.dart';
 import 'package:flutter/material.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -35,20 +36,21 @@ class _HomePageState extends State<HomePage> {
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
               image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage("assets/chat.jpg"),
-              )),
+            fit: BoxFit.cover,
+            image: AssetImage("assets/chat.jpg"),
+          )),
           child: ListView.builder(
             itemCount: textList.length,
             itemBuilder: (context, index) {
               return Container(
-                margin: EdgeInsets.all(MediaQuery.of(context).size.height * 0.02),
+                margin:
+                    EdgeInsets.all(MediaQuery.of(context).size.height * 0.02),
                 alignment: textList[index].id
                     ? AlignmentDirectional.centerEnd
                     : AlignmentDirectional.centerStart,
                 child: Container(
                   padding:
-                  EdgeInsets.all(MediaQuery.of(context).size.width * 0.025),
+                      EdgeInsets.all(MediaQuery.of(context).size.width * 0.025),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.blue,
@@ -66,7 +68,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          SizedBox(height: MediaQuery.of(context).size.height*0.05),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           SizedBox(width: MediaQuery.of(context).size.width * 0.05),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.75,
@@ -88,8 +90,9 @@ class _HomePageState extends State<HomePage> {
             child: CircleAvatar(
               backgroundColor: Colors.blue,
               radius: MediaQuery.of(context).size.width * 0.06,
-              child: const Icon(Icons.send,
-              color: Colors.white,
+              child: const Icon(
+                Icons.send,
+                color: Colors.white,
               ),
             ),
             onTap: () {
@@ -110,25 +113,27 @@ class _HomePageState extends State<HomePage> {
       bot("Hello");
     } else if (text == "hello") {
       bot("Hi");
-    } else  if (text== "how are you?" || text == "how are you" || text == "how are yu"){
+    } else if (text == "how are you?" ||
+        text == "how are you" ||
+        text == "how are yu") {
       bot("I'm good Thank :). What about you?");
-    } else if(text=="good"|| text=="perfect"){
+    } else if (text == "good" || text == "perfect") {
       bot("I'm very happy from that :)");
-    } else if(text=="who is made you?"|| text=="owner of this bot"){
+    } else if (text == "who is made you?" || text == "owner of this bot") {
       bot("4 people made me. Who are they?\n1.Burkhon \n2.Muhammadli\n3.Akbarshokh\n4.Sherali");
-    }else if(text=="who is made you?"|| text=="owner of this bot"){
+    } else if (text == "who is made you?" || text == "owner of this bot") {
       bot("4 people made me. Who are they?\n1.Burkhon \n2.Muhammadli\n3.Akbarshokh\n4.Sherali");
-    } else if(text=="who are you"|| text=="what are you"){
+    } else if (text == "who are you" || text == "what are you") {
       bot("I'm  AI chat bot. Which was increase to humand mind!");
-    } else if(text=="what is your name"|| text=="your name"){
+    } else if (text == "what is your name" || text == "your name") {
       bot("My name is UZAI, which means first UZ two letters are our country, and second AI two letters are Artificial intelegence! ");
-    } else if(text=="what your purpose"|| text=="goal"){
+    } else if (text == "what your purpose" || text == "goal") {
       bot("How people use AI technologies. What their feelings");
-    } else if(text=="what is a data"|| text=="data"){
+    } else if (text == "what is a data" || text == "data") {
       bot("Today good day. And I don't have any information about this day! Right now I'm offline mod, after some time I will find information in internet");
-    } else if(text=="fuck"|| text=="bad words"){
+    } else if (text == "fuck" || text == "bad words") {
       bot("Hello mother fucker");
-    } else{
+    } else {
       bot("I'm offline mood. Plz wait to connect with internet or close app!");
     }
   }

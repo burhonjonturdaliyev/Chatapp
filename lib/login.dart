@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:chat_bot/signup.dart';
@@ -9,6 +11,8 @@ class loginpage extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<loginpage> {
+  TextEditingController _editingController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
   bool isRememberMe = false;
 
   Widget buildEmail() {
@@ -35,6 +39,7 @@ class _LoginScreenState extends State<loginpage> {
               ]),
           height: 60,
           child: TextField(
+              controller: _editingController,
               keyboardType: TextInputType.emailAddress,
               style: TextStyle(color: Colors.blueAccent),
               decoration: const InputDecoration(
@@ -46,6 +51,22 @@ class _LoginScreenState extends State<loginpage> {
         )
       ],
     );
+  }
+
+  void tekshir(String email, String password) {
+    if (email == "burkhan" && password == "1234" ||
+        email == "sheralme" && password == "5678" ||
+        email == "muhammadli" && password == "9012" ||
+        email == "akbarshokh" && password == "3456") {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => chatapp(),
+          ));
+    } else {
+      print("Error");
+    }
+    ;
   }
 
   Widget buildPassword() {
@@ -72,6 +93,7 @@ class _LoginScreenState extends State<loginpage> {
               ]),
           height: 60,
           child: TextField(
+              controller: _passwordController,
               obscureText: true,
               style: TextStyle(color: Colors.blueAccent),
               decoration: InputDecoration(
@@ -143,14 +165,15 @@ class _LoginScreenState extends State<loginpage> {
     return MaterialButton(
       minWidth: double.infinity,
       height: 60,
-      onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => chatapp()));
-      },
+      onPressed: (() {
+        setState(() {
+          tekshir(_editingController.text, _passwordController.text);
+          _editingController.clear();
+          _passwordController.clear();
+        });
+      }),
       shape: RoundedRectangleBorder(
-          // side: BorderSide(
-          //     color: Colors.black
-          // ),
+          side: BorderSide(color: Colors.black),
           borderRadius: BorderRadius.circular(50)),
       child: Text(
         "Login",
@@ -162,30 +185,6 @@ class _LoginScreenState extends State<loginpage> {
       ),
       color: Colors.blue[300],
     );
-
-    // padding: EdgeInsets.symmetric(vertical: 25),
-    // width: double.infinity,
-    // child: FloatingActionButton(
-    //     elevation: 5,
-    //   onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>chatapp())),
-    //   //padding: EdgeInsets.all(15),
-    //   shape: RoundedRectangleBorder(
-    //     borderRadius: BorderRadius.circular(15),
-    //     side: BorderSide(
-    //       color: Colors.blue,
-    //     )
-    //   ),
-    //   //color: Colors.white,
-    //   child: Text(
-    //     "LOGIN",
-    //     style: TextStyle(
-    //       color: Colors.white,
-    //       fontSize: 18,
-    //       fontWeight: FontWeight.bold,
-    //
-    //     ),
-    //   )
-    // ),
   }
 
   Widget buildSignUpBtn() {
@@ -246,7 +245,6 @@ class _LoginScreenState extends State<loginpage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.light,
         backgroundColor: Color(0x661E90FF),
         leading: IconButton(
           onPressed: () {
@@ -258,6 +256,7 @@ class _LoginScreenState extends State<loginpage> {
             color: Colors.white,
           ),
         ),
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,

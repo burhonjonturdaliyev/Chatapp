@@ -1,3 +1,5 @@
+// ignore_for_file: unused_element
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:chat_bot/About.dart';
 import 'package:chat_bot/Contact.dart';
@@ -12,21 +14,20 @@ import 'chat_home_page.dart';
 
 void main() {
   runApp(MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      debugShowCheckedModeBanner: false,
-   // home: MyAdmin(),
+    theme: ThemeData(
+      primarySwatch: Colors.blue,
+    ),
+    debugShowCheckedModeBanner: false,
+    // home: MyAdmin(),
     routes: {
-        "/adminPanel": (context) => MyAdmin(),
+      "/adminPanel": (context) => MyAdmin(),
     },
 
     // home: admin(),
-      home: welcomepage(),
-  //home: loginpage(),
-  //home: chatapp(),
-  )
-  );
+    home: welcomepage(),
+    //home: loginpage(),
+    //home: chatapp(),
+  ));
 }
 
 class chatapp extends StatefulWidget {
@@ -48,7 +49,9 @@ void _launcherURL(int value) async {
     url = "https://t.me/Bek_portfolio";
   }
 
+  // ignore: deprecated_member_use
   if (await canLaunch(url)) {
+    // ignore: deprecated_member_use
     await launch(
       url,
       forceSafariVC: true,
@@ -74,13 +77,13 @@ class _chatappState extends State<chatapp> {
       url = "https://miro.medium.com/max/720/1*vih036gD7fwgfj2jXHgKHA.webp";
     } else if (value == 2) {
       url =
-      "https://image.shutterstock.com/image-vector/banner-social-media-marketing-technology-260nw-1142740865.jpg";
+          "https://image.shutterstock.com/image-vector/banner-social-media-marketing-technology-260nw-1142740865.jpg";
     } else if (value == 3) {
       url =
-      "https://www.uxdesigninstitute.com/blog/wp-content/uploads/2022/04/101_ux_vs_ui_illustration_blog.png";
+          "https://www.uxdesigninstitute.com/blog/wp-content/uploads/2022/04/101_ux_vs_ui_illustration_blog.png";
     } else if (value == 4) {
       url =
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--EfIG-oPF--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/ssqkgebqme30hf4fwmw0.png";
+          "https://res.cloudinary.com/practicaldev/image/fetch/s--EfIG-oPF--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/ssqkgebqme30hf4fwmw0.png";
     }
 
     return Card(
@@ -295,21 +298,20 @@ class _chatappState extends State<chatapp> {
                     autoPlay: true,
                   ),
                   items: imageList
-                      .map((e) =>
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0),
-                        child: Stack(
-                          fit: StackFit.expand,
-                          children: [
-                            Image.network(
-                              e,
-                              width: 1050.0,
-                              height: 350.0,
-                              fit: BoxFit.cover,
-                            )
-                          ],
-                        ),
-                      ))
+                      .map((e) => ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Stack(
+                              fit: StackFit.expand,
+                              children: [
+                                Image.network(
+                                  e,
+                                  width: 1050.0,
+                                  height: 350.0,
+                                  fit: BoxFit.cover,
+                                )
+                              ],
+                            ),
+                          ))
                       .toList()),
             ),
             new Divider(
