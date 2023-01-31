@@ -1,6 +1,7 @@
-import 'package:chat_bot/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import 'Home.dart';
 
 class signupgape extends StatelessWidget {
   Widget inputFile({label, obscureText = false}) {

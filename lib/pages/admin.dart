@@ -1,5 +1,6 @@
-import 'package:chat_bot/adminpanel.dart';
 import 'package:flutter/material.dart';
+
+import 'adminpanel.dart';
 
 class admin extends StatefulWidget {
   const admin({Key? key}) : super(key: key);

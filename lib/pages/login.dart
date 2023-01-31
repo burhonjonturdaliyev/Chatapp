@@ -1,9 +1,10 @@
 // ignore_for_file: unused_field
 
+import 'package:chat_bot/pages/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:chat_bot/signup.dart';
-import 'main.dart';
+
+import 'Home.dart';
 
 class loginpage extends StatefulWidget {
   @override
